@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content%}
+
+<h3 class="text-center alert">Schools List</h3>
+
+<ol>
+    {% for school in schools %}
+    <li>
+        <a href="{% url 'basic_app:school_detail' pk=school.id %}">{{school.name}}</a>
+    </li>
+    {% endfor %}
+</ol>
+
+{% endblock content %}

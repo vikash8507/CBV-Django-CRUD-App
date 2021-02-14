@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content%}
+
+<h2 class="text-center alert">School Detail</h2>
+
+
+Name: <h4>{{school.name}}</h4>
+Principal: <p>{{school.principal}}</p>
+Location: <p>{{school.location}}</p>
+
+<h3>Students List of this School</h3>
+
+<ol>
+    {% for student in school.students.all %}
+    <li>{{student.name}} : {{student.email}}</li>
+    {% endfor %}
+</ol>
+
+{% endblock content %}
